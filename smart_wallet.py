@@ -85,24 +85,26 @@ class SmartWallet():
         return None
 
     
-wallet1 = SmartWallet("Иван", 1000, 'USD')
-wallet2 = SmartWallet("Мария", 500, 'EUR')
+if __name__ == "__main__":
+    # Этот код выполнится ТОЛЬКО при прямом запуске файла
+    wallet1 = SmartWallet("Иван", 1000, 'USD')
+    wallet2 = SmartWallet("Мария", 500, 'EUR')
 
-print(f"Баланс Ивана: {wallet1.balance} {wallet1.currency}")
-print(f"Баланс Ивана в EUR: {wallet1.get_balance_in('EUR'):.2f}")
-print(f"Баланс Ивана в RUB: {wallet1.get_balance_in('RUB'):.2f}")
+    print(f"Баланс Ивана: {wallet1.balance} {wallet1.currency}")
+    print(f"Баланс Ивана в EUR: {wallet1.get_balance_in('EUR'):.2f}")
+    print(f"Баланс Ивана в RUB: {wallet1.get_balance_in('RUB'):.2f}")
 
-print(f"\nБаланс Марии: {wallet2.balance} {wallet2.currency}")
-print(f"Баланс Марии в USD: {wallet2.get_balance_in('USD'):.2f}")
+    print(f"\nБаланс Марии: {wallet2.balance} {wallet2.currency}")
+    print(f"Баланс Марии в USD: {wallet2.get_balance_in('USD'):.2f}")
 
-# Создаем и сохраняем кошелек
-wallet = SmartWallet("Тестовый", 1500, 'USD')
-wallet.save()
-print("Кошелек сохранен")
+    # Создаем и сохраняем кошелек
+    wallet = SmartWallet("Тестовый", 1500, 'USD')
+    wallet.save()
+    print("Кошелек сохранен")
 
-# Загружаем кошелек (как будто после перезапуска программы)
-loaded_wallet = SmartWallet.load("Тестовый")
-if loaded_wallet:
-    print(f"Загружен: {loaded_wallet.owner}, баланс: {loaded_wallet.balance}")
-else:
-    print("Кошелек не найден")
+    # Загружаем кошелек (как будто после перезапуска программы)
+    loaded_wallet = SmartWallet.load("Тестовый")
+    if loaded_wallet:
+        print(f"Загружен: {loaded_wallet.owner}, баланс: {loaded_wallet.balance}")
+    else:
+        print("Кошелек не найден")
