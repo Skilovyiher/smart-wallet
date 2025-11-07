@@ -6,12 +6,3 @@ echo "" >> .gitignore
 echo "# Кэш Python" >> .gitignore
 echo "__pycache__/" >> .gitignore
 echo "*.pyc" >> .gitignore
-
-*
-!smart_wallet/
-!database_manager.py
-!requirements.txt
-!.gitignore
-
-
-smart_wallet/__pycache__/
