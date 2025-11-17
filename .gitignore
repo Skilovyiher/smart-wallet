@@ -6,3 +6,8 @@ echo "" >> .gitignore
 echo "# Кэш Python" >> .gitignore
 echo "__pycache__/" >> .gitignore
 echo "*.pyc" >> .gitignore
+
+__pycache__/
+*.pyc
+*.db
+*.sqlite3
